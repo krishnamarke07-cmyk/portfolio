@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Krushna Marke | Portfolio</title>
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(135deg, #0f0f0f, #1c1c1c);
+      color: #fff;
+      overflow-x: hidden;
+      scroll-behavior: smooth;
+    }
+
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.7);
+      backdrop-filter: blur(10px);
+      padding: 15px 50px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+    }
+
+    header h1 {
+      font-weight: 700;
+      font-size: 1.8em;
+      letter-spacing: 2px;
+      color: #00bcd4;
+    }
+
+    nav a {
+      color: #fff;
+      margin-left: 25px;
+      text-decoration: none;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #00bcd4;
+    }
+
+    section {
+      padding: 100px 10%;
+      min-height: 100vh;
+    }
+
+    /* Hero Section */
+    .hero {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      animation: fadeIn 2s ease-in-out;
+    }
+
+    .hero h2 {
+      font-size: 2.5em;
+      color: #00bcd4;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      color: #ddd;
+      max-width: 600px;
+      margin: 10px auto;
+    }
+
+    .hero button {
+      margin-top: 20px;
+      background: #00bcd4;
+      border: none;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: transform 0.3s, background 0.3s;
+    }
+
+    .hero button:hover {
+      background: #0097a7;
+      transform: scale(1.1);
+    }
+
+    /* About Section */
+    .about {
+      text-align: center;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .about-content h3 {
+      font-size: 2em;
+      margin-bottom: 15px;
+      color: #00bcd4;
+    }
+
+    .about-content p {
+      line-height: 1.8;
+      color: #ccc;
+      font-size: 1.1em;
+    }
+
+    .socials {
+      margin-top: 30px;
+    }
+
+    .socials p {
+      margin-bottom: 10px;
+      color: #aaa;
+    }
+
+    .socials a {
+      margin: 0 10px;
+      text-decoration: none;
+      color: #00bcd4;
+      font-weight: bold;
+      display: inline-block;
+      transition: color 0.3s;
+    }
+
+    .socials a:hover {
+      color: #fff;
+    }
+
+    /* Skills Section */
+    .skills {
+      text-align: center;
+    }
+
+    .skills h2 {
+      color: #00bcd4;
+      margin-bottom: 30px;
+      font-size: 2em;
+    }
+
+    .skill-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+      justify-items: center;
+    }
+
+    .skill {
+      background: #1a1a1a;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+      transition: transform 0.3s;
+    }
+
+    .skill:hover {
+      transform: scale(1.05);
+    }
+
+    /* Contact Section */
+    .contact {
+      text-align: center;
+    }
+
+    .contact h2 {
+      color: #00bcd4;
+      margin-bottom: 20px;
+      font-size: 2em;
+    }
+
+    .contact p {
+      color: #ccc;
+      margin-bottom: 20px;
+    }
+
+    .contact a.button {
+      display: inline-block;
+      background: #00bcd4;
+      color: #fff;
+      padding: 12px 30px;
+      border-radius: 30px;
+      text-decoration: none;
+      transition: background 0.3s;
+    }
+
+    .contact a.button:hover {
+      background: #0097a7;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #111;
+      color: #aaa;
+      font-size: 0.9em;
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Krushna Marke</h1>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="home">
+    <h2>Hi, I'm Krushna Marke</h2>
+    <p>A student of <strong>YCCE</strong>, Department of <strong>Information Technology</strong>.  
+      I’m an aspiring <strong>Video Editor</strong> and <strong>Content Creator</strong> passionate about creativity and technology.</p>
+    <button onclick="scrollToAbout()">Explore My Work</button>
+  </section>
+
+  <section class="about" id="about">
+    <div class="about-content">
+      <h3>About Me</h3>
+      <p>
+        Hey! I'm Krushna, a creator who loves turning ideas into visually engaging content.
+        I enjoy experimenting with video editing tools and creating digital stories that connect with people.
+        I’m currently pursuing my B.Tech in IT at YCCE, where I’m exploring both the technical and creative sides of technology.
+      </p>
+
+      <div class="socials">
+        <p>Follow me on:</p>
+        <a href="https://instagram.com/toxic_hostellers" target="_blank">@toxic_hostellers</a>
+        <a href="https://instagram.com/edi_tx007" target="_blank">@edi_tx007</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2>Skills</h2>
+    <div class="skill-grid">
+      <div class="skill">DaVinci Resolve</div>
+      <div class="skill">After Effects</div>
+      <div class="skill">Video Editing (Premiere Pro, CapCut)</div>
+      <div class="skill">Canva / Photoshop Basics</div>
+      <div class="skill">Content Creation & Social Media Strategy</div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact">
+    <h2>Contact Me</h2>
+    <p>Have a project idea or collaboration in mind? Let’s connect!</p>
+    <a href="https://forms.gle/1dMomyD2TeUR63767" target="_blank" class="button">Open Google Form</a>
+    <p style="margin-top:10px; color:#aaa;">or email me directly at: 
+      <a href="mailto:krishnamarke07@gmail.com" style="color:#00bcd4;">krishnamarke07@gmail.com</a>
+    </p>
+  </section>
+
+  <footer>
+    © 2025 Krushna Marke | Designed with love and creativity
+  </footer>
+
+  <script>
+    function scrollToAbout() {
+      document.getElementById('about').scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
+</body>
+</html>
